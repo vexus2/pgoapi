@@ -158,7 +158,7 @@ def main():
 
     # apparently new dict has binary data in it, so formatting it with this method no longer works, pprint works here but there are other alternatives    
     # print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2)))
-    print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
+    #print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
     find_poi(api, position[0], position[1])
 
 def find_poi(api, lat, lng):
@@ -190,9 +190,9 @@ def find_poi(api, lat, lng):
         # time.sleep(0.51)
     # new dict, binary data
     # print('POI dictionary: \n\r{}'.format(json.dumps(poi, indent=2)))
-    print('POI dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(poi)))
-    print('Open this in a browser to see the path the spiral search took:')
-    print_gmaps_dbug(coords)
+    print('{}'.format(pprint.PrettyPrinter(indent=4).pformat(poi)))
+    #print('Open this in a browser to see the path the spiral search took:')
+    #print_gmaps_dbug(coords)
 
 def get_key_from_pokemon(pokemon):
     return '{}-{}'.format(pokemon['spawnpoint_id'], pokemon['pokemon_data']['pokemon_id'])
