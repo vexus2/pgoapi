@@ -5,4 +5,4 @@ COPY ./pokecli.py /pokecli.py
 
 RUN for r in `cat requirements.txt`; do pip install $r; done
 
-ENTRYPOINT [ "python", "/pokecli.py" ]
+# ENTRYPOINT [ "python", "/pokecli.py" ]
