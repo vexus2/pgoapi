@@ -95,7 +95,7 @@ def init_config():
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
     parser.add_argument("-p", "--password", help="Password", required=required("password"))
     parser.add_argument("-la", "--latitude", help="Location's latitude")
-    parser.add_argument("-lo", "--longitude", help="Location's longitude)
+    parser.add_argument("-lo", "--longitude", help="Location's longitude")
     parser.add_argument("-al", "--altitude", help="Location's altitude")
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-t", "--test", help="Only parse the specified location", action='store_true')
