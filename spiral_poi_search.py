@@ -131,7 +131,8 @@ def main():
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
 
-    position = get_pos_by_name(config.location)
+    position = (config.latitude, config.longitude, config.altitude)
+
     if not position:
         return
         
