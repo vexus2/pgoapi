@@ -133,7 +133,7 @@ def main():
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
 
-    position = (config.latitude, config.longitude, config.altitude)
+    position = tuple([float(config.latitude), float(config.longitude), float(config.altitude)])
 
     if not position:
         return
